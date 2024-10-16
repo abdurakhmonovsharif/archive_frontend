@@ -1,13 +1,55 @@
-@font-face {
-    font-family: 'Roboto', sans-serif;
-    src: url('/fonts/CustomFont.woff2') format('woff2'),
-         url('/fonts/CustomFont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v32-latin-regular.woff2") format("woff2");
+}
+/* roboto-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto-v32-latin-500.woff2") format("woff2");
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v32-latin-700.woff2") format("woff2");
+}
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/inter-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/inter-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 * {
   font-family: "Roboto", sans-serif;
@@ -17,9 +59,17 @@ button {
   cursor: pointer;
   transition: all 0.4s ease;
 }
+body {
+  transition: all 0.5s ease;
+}
+body.dark {
+  transition: all 0.5s ease;
+  background-color: #252c3f;
+  color: #ffffff;
+}
 
-.container {
+.my-container {
   max-width: 1380px;
-  padding: 0 20px;
   margin: 0 auto;
+  @apply lg:px-5 md:px-3 px-2;
 }

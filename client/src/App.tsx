@@ -1,8 +1,9 @@
-import { Route } from "./Route"
+import { Route } from "./Route";
 
 function App() {
-  return <Route />
-
+  return (
+      <Route />
+  );
 }
 
-export default App
+export default App;
