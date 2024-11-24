@@ -25,7 +25,7 @@ export const LanguageSelectBox = () => {
     >
       <div className="lang_box ">
         <div className="my-lan-select">
-          <div className="lan-selected-item text-white ">
+          <div className="lan-selected-item text-white dark:text-[#FFFFFFC2]">
             <CurrentLanguage />
           </div>
           <div className="lan-items">

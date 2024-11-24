@@ -1,30 +1,40 @@
 import { Link } from "react-router-dom";
-import { categories } from "../../data/categories";
 import LogoImg from "../../assets/img/logo.png";
 import LogoImg2 from "../../assets/img/photo_2024-10-05_16-52-36.jpg";
-import { DarkSearchIcon, DarkVektorIcon, SearchIcon, VektorIcon2 } from "../../assets/icons/icons";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "../../context/theme.context";
+import { MobileNavbarList } from "../../components/MobileNavbar";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { SearchInput } from "../../components/SearchInput";
+import { Categories } from "../../components/Categories";
 
 export const HeaderBottom = () => {
     const { isDarkMode } = useContext(ThemeContext)
+    const [isOpen, setIsOpen] = React.useState(false);
+    const toggleDrawer = () => {
+        setIsOpen((prevState) => !prevState)
+    }
+    const [searchInputVisible, setSearchInputVisible] = React.useState(false);
+    const toogleSearchInput = () => setSearchInputVisible(!searchInputVisible)
 
-    return <div className="py-[15px] flex items-center border-b border-gray-200 justify-between ">
-        <div className="flex items-center gap-5">
-            <div className="w-[128px]">
-                {isDarkMode ? <img src={LogoImg} alt="logo_img" className="w-[128px]" /> : <img src={LogoImg2} alt="logo_img" className="w-[128px]" />}
+    return <div className="container">
+        <div className="py-[15px] flex items-center border-b border-gray-200 justify-between">
+            <div className="flex items-center gap-5 ">
+                <div className="md:w-24 xl:w-[128px] lg:w-[128px]">
+                    {isDarkMode ? <Link to={"/"}><img src={LogoImg} alt="logo_img" className="w-[128px]" /></Link> : <Link to={"/"}><img src={LogoImg2} alt="logo_img" className="w-[128px]" /></Link>}
+                </div><h2 className={`hidden sm:block w-full md:block ${searchInputVisible ? "!hidden xl:!block" : ""} lg:hidden xl:block dark:text-[#FFFFFFC2] text-archive_primary font-normal font-secondary text-lg lg:text-2xl `} >O‘zbekiston Milliy arxivi</h2>
             </div>
-            <h2 className={`hidden xl:block dark:text-white text-archive_primary font-normal font-secondary text-2xl `} >O‘zbekiston Milliy arxivi</h2>
+            {searchInputVisible ? null : <Categories />}
+            <div className={`flex justify-end gap-x-2 items-center max-w-[700px] ${searchInputVisible ? 'w-full' : 'w-auto'} `}>
+                <SearchInput toogleSearchInput={toogleSearchInput} searchInputVisible={searchInputVisible} />
+                <div className="lg:hidden  p-2.5 border-2 border-archive_border dark:border dark:border-[#FFFFFFC2] rounded-md max-w-[40px] flex items-center justify-center">
+                    <button onClick={toggleDrawer}><RxHamburgerMenu /></button>
+                </div>
+            </div>
+            {/* mobile navbar list  */}
+            <MobileNavbarList isOpen={isOpen} toggleDrawer={toggleDrawer} />
         </div>
-        <ul className="hidden lg:flex items-center justify-end gap-5 lg:mx-auto lg:w-[783px] lg:justify-between ">
-            {categories.map((item, i) => <li className="items center" key={i}><Link to={item.url} className={`dark:text-white text-archive_primary text-base font-medium font-secondary`} >{item.title}</Link><button className={`ml-3`}>
-                {isDarkMode ? <DarkVektorIcon /> : <VektorIcon2 />}
-            </button></li>)}
-        </ul>
-        <div className="">
-            <button className="p-1.5 dark:bg-white bg-archive_primary rounded-md">
-                {isDarkMode ? <DarkSearchIcon /> : <SearchIcon />}
-            </button>
-        </div>
+
+
     </div>
 }

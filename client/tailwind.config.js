@@ -3,14 +3,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors:{
-        archive_primary:"#254DAF",
-        archive_bg_dark:'#252c3f'
+      colors: {
+        archive_primary: "#254DAF",
+        archive_bg_dark: "#252c3f",
+        archive_border: "#E6ECF8",
       },
       fontFamily: {
         primary: "Roboto",
-        secondary: "Inter"
-      }
+        secondary: "Inter",
+      },
     },
   },
   plugins: [],

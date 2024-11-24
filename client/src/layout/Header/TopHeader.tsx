@@ -59,7 +59,7 @@ export const TopHeader = () => {
         <div className="w-[198px] hidden sm:block ml-8">
           <Link
             to={"/"}
-            className="font-normal text-white text-sm inline-block"
+            className="font-normal text-white dark:text-[#FFFFFFC2] text-sm inline-block"
           >
             Elektron pochta: {contacts.email}
           </Link>
@@ -71,13 +71,13 @@ export const TopHeader = () => {
           <div className="hidden lg:block">
             <Link
               to={"/"}
-              className="font-normal text-white text-sm border-r-2 pr-6"
+              className="font-normal text-white dark:text-[#FFFFFFC2] text-sm border-r-2 pr-6"
             >
               Davlat ramzlari
             </Link>
           </div>
           <div className="hidden lg:block">
-            <Link to={"/"} className="font-normal text-white text-sm">
+            <Link to={"/"} className="font-normal text-white dark:text-[#FFFFFFC2] text-sm">
               Sayt xaritasi
             </Link>
           </div>
@@ -92,7 +92,7 @@ export const TopHeader = () => {
               </button>
               <button
                 onClick={() => { toogleDarkMode(true) }}
-                className={`p-1.5 space-x-2 rounded-full ${isDarkMode ? 'bg-white ' : 'bg-transparent'}`}>
+                className={`p-1.5 space-x-2 rounded-full ${isDarkMode ? 'bg-[#FFFFFFC2] ' : 'bg-transparent'}`}>
                 {isDarkMode ? <ActiveNightIcon /> : <NightIcon />}
               </button>
             </div>
