@@ -5,10 +5,10 @@ import { DarkVektorIcon, VektorIcon2 } from "../assets/icons/icons"
 import React from "react"
 import { Link } from "react-router-dom"
 
-export const Categories = () => {
+export const NavItems = () => {
     const { isDarkMode } = useContext(ThemeContext)
     return <React.Fragment>
-        <ul className="hidden lg:flex items-center justify-end gap-5 lg:mx-auto lg:w-[783px] lg:justify-between">
+        <ul className="hidden lg:flex items-center justify-end gap-5 lg:mx-auto lg:w-[783px] lg:justify-between z-20">
             {categories.map((item, i) => (
                 <li className="group relative cursor-pointer flex" key={i}>
                     <Link to={item.url}
@@ -34,7 +34,7 @@ export const Categories = () => {
     </React.Fragment>
 }
 
-export const MobileDropCategories = () => {
+export const MobileDropNavItems = () => {
     const { isDarkMode } = useContext(ThemeContext)
     const [openedDropDownIndex, setOpenedDropDownIndex] = useState<null | number>(null)
     const onDropDownOpen = (index: number) => setOpenedDropDownIndex(prev => index === prev ? null : index)

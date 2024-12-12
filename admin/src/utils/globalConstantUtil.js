@@ -4,9 +4,9 @@ module.exports = Object.freeze({
         USER_DETAIL : "USER_DETAIL",
         LEAD_ADD_NEW : "LEAD_ADD_NEW",
         CONFIRMATION : "CONFIRMATION",
+         ADD_NEW_PAGE:"ADD NEW PAGE",
         DEFAULT : "",
     },
-
     RIGHT_DRAWER_TYPES : {
         NOTIFICATION : "NOTIFICATION",
         CALENDAR_EVENTS : "CALENDAR_EVENTS",

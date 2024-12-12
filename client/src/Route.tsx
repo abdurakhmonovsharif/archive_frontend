@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import { DefaultComponent, MainHome } from "./pages/Home/MainHome"
+import { DefaultComponent, MainHome } from "./pages/sections/home/MainHome"
 
 export const Route = () => {
 

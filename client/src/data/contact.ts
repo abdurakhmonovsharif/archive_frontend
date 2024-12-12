@@ -1,5 +1,5 @@
 import FacebookIcon from "../assets/icons/facebook.svg";
-import TelegrammIcon from "../assets/icons/telegramm.svg";
+import TelegramIcon from "../assets/icons/telegram.svg";
 import YoutubeIcon from "../assets/icons/youtube.svg";
 
 interface Contact {
@@ -16,7 +16,7 @@ export const contacts: Contact = {
   email: "info@nauz.uz",
   icons: [
     { name: "facebook", icon: FacebookIcon },
-    { name: "telegramm", icon: TelegrammIcon },
+    { name: "telegramm", icon: TelegramIcon },
     { name: "youtube", icon: YoutubeIcon },
   ],
 

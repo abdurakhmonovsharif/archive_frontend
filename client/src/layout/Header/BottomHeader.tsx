@@ -6,7 +6,7 @@ import { ThemeContext } from "../../context/theme.context";
 import { MobileNavbarList } from "../../components/MobileNavbar";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { SearchInput } from "../../components/SearchInput";
-import { Categories } from "../../components/Categories";
+import {NavItems} from "../../components/NavItems.tsx";
 
 export const HeaderBottom = () => {
     const { isDarkMode } = useContext(ThemeContext)
@@ -24,7 +24,7 @@ export const HeaderBottom = () => {
                     {isDarkMode ? <Link to={"/"}><img src={LogoImg} alt="logo_img" className="w-[128px]" /></Link> : <Link to={"/"}><img src={LogoImg2} alt="logo_img" className="w-[128px]" /></Link>}
                 </div><h2 className={`hidden sm:block w-full md:block ${searchInputVisible ? "!hidden xl:!block" : ""} lg:hidden xl:block dark:text-[#FFFFFFC2] text-archive_primary font-normal font-secondary text-lg lg:text-2xl `} >O‘zbekiston Milliy arxivi</h2>
             </div>
-            {searchInputVisible ? null : <Categories />}
+            {searchInputVisible ? null : <NavItems />}
             <div className={`flex justify-end gap-x-2 items-center max-w-[700px] ${searchInputVisible ? 'w-full' : 'w-auto'} `}>
                 <SearchInput toogleSearchInput={toogleSearchInput} searchInputVisible={searchInputVisible} />
                 <div className="lg:hidden  p-2.5 border-2 border-archive_border dark:border dark:border-[#FFFFFFC2] rounded-md max-w-[40px] flex items-center justify-center">
