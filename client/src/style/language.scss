@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  z-index: 9;
+  z-index: 20 !important;
   position: relative;
   width: 100px;
   height: 100%;
@@ -51,7 +51,10 @@
           display: flex;
           border: 0.5px solid rgba($color: #000000, $alpha: 0.1);
           justify-content: space-between;
-
+ img{
+   width: 20px;
+   height: 20px;
+ }
           &:hover {
             cursor: pointer;
             color: #264db1;

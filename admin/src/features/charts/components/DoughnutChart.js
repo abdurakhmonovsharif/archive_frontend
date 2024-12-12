@@ -26,7 +26,7 @@ function DoughnutChart(){
         },
       };
       
-      const labels = ['Electronics', 'Home Applicances', 'Beauty', 'Furniture', 'Watches', 'Apparel'];
+      const labels = ['Electronics', 'home Applicances', 'Beauty', 'Furniture', 'Watches', 'Apparel'];
       
       const data = {
         labels,

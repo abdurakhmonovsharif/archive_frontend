@@ -4,7 +4,7 @@ import LogoImg from "../assets/img/logo.png";
 import LogoImg2 from "../assets/img/photo_2024-10-05_16-52-36.jpg";
 import { useContext } from "react";
 import { ThemeContext } from "../context/theme.context";
-import { MobileDropCategories } from "./Categories";
+import { MobileDropNavItems } from "./NavItems.tsx";
 
 type MobileNavbarListProps = {
     isOpen: boolean;
@@ -36,7 +36,7 @@ export const MobileNavbarList = ({ isOpen, toggleDrawer }: MobileNavbarListProps
                             </button>
                         </div>
                     </div>
-                    <MobileDropCategories />
+                    <MobileDropNavItems />
                 </Drawer>
             </div>
         </>

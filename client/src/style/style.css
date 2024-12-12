@@ -80,7 +80,8 @@ img {
 .container {
   max-width: 1380px;
   margin: 0 auto;
-  @apply lg:px-5 md:px-3 px-2;
+
+  @apply lg:px-5 md:px-3 px-2 lg:py-2 md:py-2 py-1;
 }
 
 /* search input animation */
