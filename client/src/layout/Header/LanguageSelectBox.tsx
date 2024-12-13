@@ -21,21 +21,21 @@ export const LanguageSelectBox = () => {
   return (
     <div
       onClick={toogleLang}
-      className="language-container select-none lg:ml-[20px]" 
+      className="language-container  select-none lg:ml-[20px]" 
     >
       <div className="lang_box ">
         <div className="my-lan-select">
           <div className="lan-selected-item text-white dark:text-[#FFFFFFC2]">
             <CurrentLanguage />
           </div>
-          <div className="lan-items">
+          <div className="lan-items dark:!bg-black ">
             {language.map((item, i) => (
               <div
                 key={i}
                 className={activeChangeLang ? "lan-item block" : "hidden"}
               >
                 <label
-                  className={`${item.value === lang ? "text-[#264DB1]" : "text-black"
+                  className={`${item.value === lang ? "text-[#264DB1]" : "dark:text-white text-black"
                     }`}
                 >
                   <img src={item.img} alt="" width={"20px"} />

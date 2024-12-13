@@ -45,11 +45,11 @@ export const HeroSlider = () => {
     ;
 
     return (
-        <Slider {...settings} className="w-1/2 relative py-5">
+        <Slider {...settings} className="w-full relative">
             {
-                Array.from({length: 10}).map(() => <div className="relative">
-                    <div className="w-full rounded">
-                        <img src={BgImg} alt="img" className={"rounded"}/>
+                Array.from({length: 10}).map(() => <div className="relative h-[415px] rounded">
+                    <div className="w-full rounded h-full">
+                        <img src={BgImg} alt="img" className={"rounded object-cover h-full w-full"}/>
                     </div>
                     <div
                         className="absolute inset-0 flex flex-col justify-end  text-white text-xl font-bold space-y-2 bg-gradient-to-b from-transparent to-black/30 p-4">

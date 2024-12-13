@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 export const NavItems = () => {
     const { isDarkMode } = useContext(ThemeContext)
     return <React.Fragment>
-        <ul className="hidden lg:flex items-center justify-end gap-5 lg:mx-auto lg:w-[783px] lg:justify-between z-20">
+        <ul className="hidden lg:flex items-center justify-end gap-5 lg:mx-auto lg:w-[783px] lg:justify-between z-10">
             {categories.map((item, i) => (
                 <li className="group relative cursor-pointer flex" key={i}>
                     <Link to={item.url}
