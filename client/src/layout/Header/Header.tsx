@@ -1,7 +1,7 @@
 import React from "react";
-import { TopHeader } from "./TopHeader";
 import { ThemeContext } from "../../context/theme.context";
-import { HeaderBottom } from "./BottomHeader";
+import { TopHeader } from "./TopHeader";
+import {HeaderBottom} from "./BottomHeader.tsx";
 
 
 export const Header = () => {

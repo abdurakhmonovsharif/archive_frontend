@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import LogoImg from "../../assets/img/logo.png";
 import LogoImg2 from "../../assets/img/photo_2024-10-05_16-52-36.jpg";
 import React, { useContext } from "react";
-import { ThemeContext } from "../../context/theme.context";
-import { MobileNavbarList } from "../../components/MobileNavbar";
+import { ThemeContext } from "../../context/theme.context.tsx";
+import { MobileNavbarList } from "../../components/MobileNavbar.tsx";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { SearchInput } from "../../components/SearchInput";
+import { SearchInput } from "../../components/SearchInput.tsx";
 import {NavItems} from "../../components/NavItems.tsx";
 
 export const HeaderBottom = () => {

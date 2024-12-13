@@ -48,7 +48,7 @@ export const TopHeader = () => {
                         >
                             <div
                                 className={`
-                                ${hoveredIndex === i ? "bg-[#252c3f]" : "bg-[#4465BA]"}
+                                ${hoveredIndex === i ? "bg-[#252c3f]" : isDarkMode?"bg-archive_bg_dark":"bg-[#4465BA]"}
                                 w-[28px] h-[24px] rounded-md p-0.5 flex justify-center items-center duration-300`}>
                                 <img src={el.icon} alt="svg"/>
                             </div>
