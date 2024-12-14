@@ -14,7 +14,7 @@ function DocComponentsContent(){
     const dispatch = useDispatch()
 
     const updateFormValue = () => {
-        // Dummy function for input text component
+        // Dummy function for input text components
     }
 
     return(

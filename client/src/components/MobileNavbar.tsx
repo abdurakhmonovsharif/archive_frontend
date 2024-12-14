@@ -20,9 +20,9 @@ export const MobileNavbarList = ({ isOpen, toggleDrawer }: MobileNavbarListProps
                     onClose={toggleDrawer}
                     direction="right"
                     className={` !w-[100vw] dark:!bg-archive_bg_dark `}>
-                    <div className="flex items-start p-5 border-b border-gray-100">
+                    <div className="flex items-center p-5 border-b border-gray-100">
                         <div className="flex items-center gap-5">
-                            <div>
+                            <div className={"md:w-24 w-[71px] xl:w-[128px] lg:w-[128px]"}>
                                 {isDarkMode ? (<img src={LogoImg} alt="logo_img" className="w-[128px]" />) : (<img src={LogoImg2} alt="logo_img" className="w-[128px]" />)}
                             </div>
                             <h3 className="hidden lg:block md:block dark:text-[#FFFFFFC2] text-archive_primary font-normal font-secondary text-lg">

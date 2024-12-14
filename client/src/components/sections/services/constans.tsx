@@ -1,13 +1,13 @@
-import Narxnoma from '../../../assets/img/narxnoma.gif'
-import JismoniyShaxs from '../../../assets/img/jismoniy-shaxs.svg'
-import DarkJismoniyShaxs from '../../../assets/img/jismoniy-dark-shaxs.svg'
-import YurudikShaxs from '../../../assets/img/yuridik-shaxs.svg'
-import DarkYurudikShaxs from '../../../assets/img/yuridik-dark-shaxs.svg'
-import Etuk from '../../../assets/img/etuk-icon.svg'
-import DarkEtuk from '../../../assets/img/etuk-dark-icon.svg'
-import Corruption from '../../../assets/img/corruption.svg'
-import Question from '../../../assets/img/question-icon.svg'
-import DarkQuestion from '../../../assets/img/question-dark-icon.svg'
+import Narxnoma from '../../../assets/img/services/narxnoma.gif'
+import JismoniyShaxs from '../../../assets/img/services/jismoniy-shaxs.svg'
+import DarkJismoniyShaxs from '../../../assets/img/services/jismoniy-dark-shaxs.svg'
+import YurudikShaxs from '../../../assets/img/services/yuridik-shaxs.svg'
+import DarkYurudikShaxs from '../../../assets/img/services/yuridik-dark-shaxs.svg'
+import Etuk from '../../../assets/img/services/etuk-icon.svg'
+import DarkEtuk from '../../../assets/img/services/etuk-dark-icon.svg'
+import Corruption from '../../../assets/img/services/corruption.svg'
+import Question from '../../../assets/img/services/question-icon.svg'
+import DarkQuestion from '../../../assets/img/services/question-dark-icon.svg'
 export const services = [
     { 
         label: "Jismoniy shaxslar uchun", 
