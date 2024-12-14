@@ -5,6 +5,7 @@ export const Route = () => {
 
     const routes = createBrowserRouter([
         {
+
             path: "/",
             element: <MainHome />,
             children: [
