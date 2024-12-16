@@ -1,0 +1,6 @@
+export const sliderItems=[
+    {image:"https://nauz.uz/medias/article/big/828/photo-2023-05-30-09-53-47.jpg",title:`O‘zbekiston Respublikasi Prezidenti Administratsiyasi huzuridagi Axborot va ommaviy kommunikatsiyalar agentligi tomonidan 2023-yil 19-maydagi 102-sonli buyrug‘iga asosan O‘zbekiston Milliy arxivi bosh arxeografi Arifdjanova Dilfuza Ravshandjanovna “A`,},
+    {image:"https://nauz.uz/medias/article/big/867/5e03bb5d-9e59-4e4e-afed-028f204ec5b9.jpg",title:` Yurtimizda ichki turizmni rivojlantirish va dam olish kunlarini samarali o‘tkazish maqsadida joriy yilning 5-6– oktabr kunlari O‘zbekiston Milliy arxivining bir guruh ustoz-faxriylari hamda xodimlari ishtirokida Samarqand shahriga sayohat uyushtiri`},
+    {image:"https://nauz.uz/medias/article/big/802/photo-2022-07-27-09-12-10.jpg",title:` O‘zbekiston Respublikasi "O‘zarxiv" agentligi tizimidagi O‘zbekiston Milliy arxivlari hamkorligidagi “2022 yil I yarim yilligida O‘zbekiston milliy arxivlarida amalga oshirilgan ishlar” mavzusida matbuot anjumani bo‘lib o‘tdi.
+`}
+]
