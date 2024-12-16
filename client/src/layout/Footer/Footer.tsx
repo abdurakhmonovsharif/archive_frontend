@@ -1,12 +1,18 @@
-import {useContext} from "react"
-import {ThemeContext} from "../../context/theme.context"
-import {Button, Image, Input} from "antd"
-import {Link} from "react-router-dom"
+import { useContext, useState } from "react"
+import { ThemeContext } from "../../context/theme.context"
+import { Button, Image, Input } from "antd"
+import { Link } from "react-router-dom"
 import Logo from '../../assets/img/photo_2024-10-05_16-52-36.jpg'
-
+import { categories } from "../../data/categories"
+import { MdOutlineArrowOutward } from "react-icons/md"
+import { contacts } from "../../data/contact"
 export const Footer = () => {
-    const {isDarkMode} = useContext(ThemeContext)
+    const { isDarkMode } = useContext(ThemeContext)
     console.log(isDarkMode)
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const onHoverIcon = (index: number) => {
+        setHoveredIndex(index);
+    };
     // return <footer>
     //     <div
     //      className={`${isDarkMode ? "bg-black" : "bg-[#264DB1]"} py-3`}
@@ -35,66 +41,47 @@ export const Footer = () => {
                         Bizni ijtimoiy tarmoqlarda kuzatib boring
                     </h3>
                     <div className="flex space-x-4">
-                        <Link to="#" className="hover:opacity-80">
-                            <Image
-                                src="/placeholder.svg"
-                                alt="Facebook"
-                                width={24}
-                                height={24}
-                                className="brightness-0 invert"
-                            />
+                    {contacts.icons.map((el, i) => (
+                        <Link
+                            key={i}
+                            to={"/"}
+                            onMouseMove={() => onHoverIcon(i)}
+                            onMouseLeave={() => onHoverIcon(contacts.icons.length)}
+                        >
+                            <div
+                                className={`
+                                ${hoveredIndex === i ? "bg-[#252c3f]" : isDarkMode?"bg-archive_bg_dark":"bg-[#4465BA]"}
+                                w-[28px] h-[24px] rounded-md p-0.5 flex justify-center items-center duration-300`}>
+                                <img src={el.icon} alt="svg"/>
+                            </div>
                         </Link>
-                        <Link to="#" className="hover:opacity-80">
-                            <Image
-                                src="/placeholder.svg"
-                                alt="Instagram"
-                                width={24}
-                                height={24}
-                                className="brightness-0 invert"
-                            />
-                        </Link>
-                        <Link to="#" className="hover:opacity-80">
-                            <Image
-                                src="/placeholder.svg"
-                                alt="YouTube"
-                                width={24}
-                                height={24}
-                                className="brightness-0 invert"
-                            />
-                        </Link>
-                        <Link to="#" className="hover:opacity-80">
-                            <Image
-                                src="/placeholder.svg"
-                                alt="Telegram"
-                                width={24}
-                                height={24}
-                                className="brightness-0 invert"
-                            />
-                        </Link>
+                    ))}
                     </div>
                 </div>
 
                 {/* Middle Column */}
                 <div className="grid grid-cols-2 gap-8">
                     <div className="space-y-4">
-                        <h3 className="text-xl font-medium">Vazirlik</h3>
+                        <h3 className="text-xl font-medium">Havolalar</h3>
                         <ul className="space-y-2 text-gray-300">
-                            <li><Link to="#" className="hover:text-white">Vazirlik haqida</Link></li>
-                            <li><Link to="#" className="hover:text-white">Yangiliklar</Link></li>
-                            <li><Link to="#" className="hover:text-white">Bo'sh ish o'rinlari</Link></li>
-                            <li><Link to="#" className="hover:text-white">Interaktiv xizmatlar</Link></li>
-                            <li><Link to="#" className="hover:text-white">Mediateka</Link></li>
+                            {categories.map((item, index) =>
+                                <li key={index}><Link to="#" className="hover:text-white">{item.title}</Link></li>
+                            )}
                         </ul>
                     </div>
                     <div className="space-y-4">
                         <h3 className="text-xl font-medium">Manzil</h3>
                         <div className="space-y-4 text-gray-300">
                             <p>
-                                100128, O'zbekiston Respublikasi, Toshkent shahri, Zulfiyaxonim ko'chasi, 3 - uy
+                                100043, Toshkent shahri, Chilonzor ko`chasi, 2 uy
+                                <Link target="_blank" to={"https://yandex.uz/maps/-/CHEOJ2KD"} className='flex mt-2 items-center gap-x-2 text-baseduration-300'>
+                                    <span className="text-white">Xaritadan ko'rish</span>
+                                    <MdOutlineArrowOutward />
+                                </Link>
                             </p>
-                            <p>(1167)</p>
+                            <p>info@nauz.uz</p>
                             <p>
-                                Devonxona +998 (71) 202-05-00 (134)
+                                +998 71 230 47 66
                             </p>
                         </div>
                     </div>
@@ -122,7 +109,7 @@ export const Footer = () => {
             </div>
 
             {/* Bottom Section */}
-            <div className="mt-16 pt-8 border-t border-white/20 flex justify-between items-center">
+            {/* <div className="mt-16 pt-8 border-t border-white/20 flex justify-between items-center">
                 <div className="flex items-center space-x-2 text-sm text-gray-300">
                     <span>Sayt ma'lumotlaridan foydalanilganda manba ko'rsatilishi shart!</span>
                     <span>Saytdagi barcha materiallardan quyidagi litsenziya bo'yicha foydalanish mumkin: Creative Commons Attribution 4.0 International.</span>
@@ -136,7 +123,7 @@ export const Footer = () => {
                         className="brightness-0 invert"
                     />
                 </div>
-            </div>
+            </div> */}
         </div>
     </footer>
 }

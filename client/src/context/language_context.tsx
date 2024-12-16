@@ -1,9 +1,10 @@
 import { createContext, useState, ReactNode } from "react";
 import React from "react";
+import { ILanguage } from "../types/ITypes";
 
 export type LanguageContextType = {
-  lang: string;
-  changeLanguage: (value: string) => void;
+  lang: keyof ILanguage;
+  changeLanguage: (value: keyof ILanguage) => void;
 };
 
 interface LanguageContextProviderProps {
@@ -17,9 +18,9 @@ export const LanguageContext = createContext<LanguageContextType>({
 export const LanguageContextProvider: React.FC<
   LanguageContextProviderProps
 > = ({ children }) => {
-  const ws_l = localStorage.getItem("ws_l") as string;
-  const [lang, setLang] = useState(ws_l || "uz");
-  const changeLanguage = (value: string) => {
+  const ws_l = localStorage.getItem("ws_l") as keyof ILanguage;
+  const [lang, setLang] = useState<keyof ILanguage>(ws_l || "uz");
+  const changeLanguage = (value: keyof ILanguage) => {
     setLang(value), localStorage.setItem("ws_l", value);
   };
 

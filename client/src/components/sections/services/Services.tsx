@@ -9,7 +9,7 @@ const Services = () => {
     return <div className={"grid grid-cols-2 grid-rows-3 gap-4 w-full h-full"}>
         {services.map((service) => <Link to={"#"} key={service.label}>
                 <Card
-                    className={"border-archive_primary grid grid-cols-1  dark:bg-archive_bg_dark hover:border-archive_primary/50 shadow-archive_primary  items-center justify-center"}
+                    className={"border-archive_primary grid grid-cols-1 duration-500 ease-in-out transition-all   dark:bg-archive_bg_dark hover:border-archive_primary/50 shadow-archive_primary  items-center justify-center"}
                     hoverable
                 >
                     <div className={"flex items-center gap-x-2 text-center px-3 w-full h-full"}>

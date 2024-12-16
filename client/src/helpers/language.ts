@@ -1,6 +1,8 @@
+import { ILanguage } from "../types/ITypes";
+
 interface Lang {
   label: string;
-  value: string;
+  value: keyof ILanguage;
   img: string;
   label_selected:string
 }
