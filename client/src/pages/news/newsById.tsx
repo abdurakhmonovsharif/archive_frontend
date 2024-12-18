@@ -19,7 +19,7 @@ const NewsById = () => {
     return (
         <div ref={containerRef}>
             <PageTitle
-                title={foundNews?.title[lang] || ""}
+                title={foundNews?.title[lang] || ""||""}
                 breadcrumbs={breadcrumbs}
                 printElement={containerRef}
             />
