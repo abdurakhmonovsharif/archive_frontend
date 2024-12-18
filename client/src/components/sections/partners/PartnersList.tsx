@@ -1,9 +1,8 @@
 import {partners} from "./constants.tsx";
 import {Card, Image} from "antd";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import {SectionTitle} from "../sectionTitle/sectionTitle.tsx"; // Ensure slick CSS is imported
+
+import {SectionTitle} from "../../common/sectionTitle/sectionTitle.tsx"; // Ensure slick CSS is imported
 
 const PartnersList = () => {
     const settings = {

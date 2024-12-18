@@ -1,63 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* AeonikTRIAL Regular */
+@font-face {
+  font-family: 'AeonikTRIAL';
+  src: url('/assets/font/AeonikTRIAL-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
 
-/* roboto-regular - latin */
+/* AeonikTRIAL Regular Italic */
 @font-face {
-  font-display: swap;
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: 'AeonikTRIAL';
+  src: url('/assets/font/AeonikTRIAL-RegularItalic.otf') format('opentype');
   font-weight: 400;
-  src: url("../fonts/roboto-v32-latin-regular.woff2") format("woff2");
+  font-style: italic;
 }
-/* roboto-500 - latin */
+
+/* AeonikTRIAL Light */
 @font-face {
-  font-display: swap;
-  font-family: "Roboto";
+  font-family: 'AeonikTRIAL';
+  src: url('/assets/font/AeonikTRIAL-Light.otf') format('opentype');
+  font-weight: 300;
   font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/roboto-v32-latin-500.woff2") format("woff2");
 }
-/* roboto-700 - latin */
+
+/* AeonikTRIAL Light Italic */
 @font-face {
-  font-display: swap;
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: 'AeonikTRIAL';
+  src: url('/assets/font/AeonikTRIAL-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* AeonikTRIAL Bold */
+@font-face {
+  font-family: 'AeonikTRIAL';
+  src: url('/assets/font/AeonikTRIAL-Bold.otf') format('opentype');
   font-weight: 700;
-  src: url("../fonts/roboto-v32-latin-700.woff2") format("woff2");
-}
-/* inter-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* inter-500 - latin */
+
+/* AeonikTRIAL Bold Italic */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/inter-v18-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* inter-600 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/inter-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-family: 'AeonikTRIAL';
+  src: url('/assets/font/AeonikTRIAL-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
 }
 
 * {
-  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+  font-family: 'Optimistic Display Medium', Helvetica, Arial, sans-serif;
+ }
 
+body {
+  transition: all 0.5s ease;
+}
 button {
   cursor: pointer;
   transition: all 0.4s ease;
@@ -76,11 +77,22 @@ img {
   height: 100%;
   object-fit: cover;
 }
-
+.ant-breadcrumb-separator{
+  color: #fff !important;
+  margin-top: 3px;
+}
+.ant-breadcrumb ol{
+  flex-wrap: nowrap;
+}
+.ant-image-mask{
+  display: none !important;
+}
+.ant-image-img{
+  cursor: pointer;
+}
 .container {
-  max-width: 1380px;
+  max-width: 1440px;
   margin: 0 auto;
-
   @apply lg:px-5 md:px-3 px-2 lg:py-2 md:py-2 py-1;
 }
 
@@ -109,4 +121,3 @@ img {
     clip-path: inset(0 0 0 0);
   }
 }
-

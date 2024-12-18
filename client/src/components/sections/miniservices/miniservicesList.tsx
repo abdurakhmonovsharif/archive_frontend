@@ -7,17 +7,20 @@ const MiniservicesList = () => {
     const [hoveredIndex, setHoveredIndex] = useState(miniservices.length)
 
     return (
-        <Row gutter={16}>
+        <Row gutter={[16, 16]} >
             {miniservices.map((service, index) => (
                 <Col
-                    span={8}
+                    xs={24}
+                    sm={12}
+                    md={8}
+                    lg={8}
                     key={index}
                     onMouseLeave={() => setHoveredIndex(miniservices.length)}
                     onMouseMove={() => setHoveredIndex(index)}
                 >
                     <Card
                         hoverable
-                        bodyStyle={{paddingTop:13,paddingBottom:13}}
+                        bodyStyle={{ paddingTop: 13, paddingBottom: 13 }}
                         className="hover:bg-archive_primary  duration-500 ease-in-out transition-all "
                     >
                         <div className="w-full flex items-center gap-x-3">
@@ -26,7 +29,7 @@ const MiniservicesList = () => {
                             >
                                 {service.icon(index === hoveredIndex ? "#FFF" : "#254DAF")}
                             </div>
-                            <Title  className={`mt-2 ${index === hoveredIndex?"!text-white":"text-black"} `} level={3}>
+                            <Title className={`mt-2 ${index === hoveredIndex ? "!text-white" : "text-black"}  `} level={3}>
                                 {service.label}
                             </Title>
                         </div>

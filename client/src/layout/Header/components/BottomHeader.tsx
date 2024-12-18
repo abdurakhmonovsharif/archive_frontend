@@ -21,8 +21,8 @@ export const HeaderBottom = () => {
         <div className="py-[15px] flex items-center border-b border-gray-200 justify-between">
             <div className="flex items-center gap-5 ">
                 <div className="md:w-24 w-[71px] xl:w-[128px] lg:w-[128px]">
-                    {isDarkMode ? <Link to={"/"}><img src={LogoImg} alt="logo_img" className="w-[128px]" /></Link> : <Link to={"/"}><img src={LogoImg2} alt="logo_img" className="w-[128px]" /></Link>}
-                </div><h2 className={`hidden sm:block w-full md:block ${searchInputVisible ? "!hidden xl:!block" : ""} lg:hidden xl:block dark:text-[#FFFFFFC2] text-archive_primary font-normal font-secondary text-lg lg:text-2xl `} >O‘zbekiston Milliy arxivi</h2>
+                    {isDarkMode ? <Link to={"/"}><img src={LogoImg} alt="logo_img" className="w-[128px] rounded-full" /></Link> : <Link to={"/"}><img src={LogoImg2} alt="logo_img" className="w-[128px]  rounded-full" /></Link>}
+                </div><h2 className={`hidden sm:block w-full md:block ${searchInputVisible ? "!hidden xl:!block" : ""} lg:hidden xl:block dark:text-[#FFFFFFC2] text-archive_primary  font-secondary text-lg lg:text-2xl  font-normal`} >O‘zbekiston Milliy arxivi</h2>
             </div>
             {searchInputVisible ? null : <NavItems />}
             <div className={`flex justify-end gap-x-2 items-center max-w-[700px] ${searchInputVisible ? 'w-full' : 'w-auto'} `}>

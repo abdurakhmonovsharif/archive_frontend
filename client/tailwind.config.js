@@ -9,8 +9,8 @@ export default {
         archive_border: "#E6ECF8",
       },
       fontFamily: {
-        primary: "Roboto",
-        secondary: "Inter",
+        roboto: "Roboto",
+        inter: "Inter",
       },
     },
   },

@@ -6,6 +6,7 @@ import Logo from '../../assets/img/photo_2024-10-05_16-52-36.jpg'
 import { categories } from "../../data/categories"
 import { MdOutlineArrowOutward } from "react-icons/md"
 import { contacts } from "../../data/contact"
+import { IoIosSend } from "react-icons/io";
 export const Footer = () => {
     const { isDarkMode } = useContext(ThemeContext)
     console.log(isDarkMode)
@@ -22,7 +23,7 @@ export const Footer = () => {
     //         </div>
     //      </div>
     // </footer>
-    return <footer className="bg-[#2851B7] text-white py-16">
+    return <footer className="bg-archive_primary dark:bg-archive_bg_dark text-white py-16  dark:border-t dark:border-gray-200 ">
         <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Left Column */}
@@ -32,7 +33,7 @@ export const Footer = () => {
                             src={Logo}
                             preview={false}
                             alt="Logo"
-                            className="rounded-full"
+                            className="rounded-full"    
                             width={64}
                             height={64}
                         />
@@ -74,7 +75,7 @@ export const Footer = () => {
                         <div className="space-y-4 text-gray-300">
                             <p>
                                 100043, Toshkent shahri, Chilonzor ko`chasi, 2 uy
-                                <Link target="_blank" to={"https://yandex.uz/maps/-/CHEOJ2KD"} className='flex mt-2 items-center gap-x-2 text-baseduration-300'>
+                                <Link target="_blank" to={"https://yandex.uz/maps/-/CHEgY2NC"} className='flex mt-2 items-center gap-x-2 text-baseduration-300'>
                                     <span className="text-white">Xaritadan ko'rish</span>
                                     <MdOutlineArrowOutward />
                                 </Link>
@@ -97,12 +98,12 @@ export const Footer = () => {
                     <div className="flex">
                         <Input
                             placeholder="Elektron pochta manzilingi"
-                            className="flex-grow mr-2 bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                            className="flex-grow mr-2 bg-white/10 border-white/20 focus-within:!outline-none  focus:!outline-none text-black placeholder:text-gray-400"
                         />
                         <Button
                             type="primary"
-                            icon={""}
-                            className="bg-white text-blue-600 hover:bg-gray-100"
+                            icon={<IoIosSend color="#000"/>}
+                            className="bg-white text-blue-600 focus-within:bg-archive_primary active:bg-archive_primary *: hover:bg-gray-100"
                         />
                     </div>
                 </div>

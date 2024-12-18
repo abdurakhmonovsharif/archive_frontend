@@ -1,4 +1,4 @@
-import {SectionTitle} from "../../../components/sections/sectionTitle/sectionTitle.tsx";
+import {SectionTitle} from "../../../components/common/sectionTitle/sectionTitle.tsx";
 import {statisticInformation} from "../../../components/sections/statisticInfo/constants.tsx";
 import {StatisticInfoCard} from "../../../components/sections/statisticInfo/statisticInfoCard.tsx";
 
